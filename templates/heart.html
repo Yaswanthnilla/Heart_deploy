@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            background-image: url("../static/image/heart.png");
+            background-size: cover;
+        }
+
+        .container {
+            padding: 30px;
+            margin: 10px;
+            margin-right: 70%;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .container .predictform form {
+            padding: 10px 30px 10px 30px;
+            text-align: center;
+
+        }
+
+        .container .predictform form input {
+            padding: 10px;
+            margin-bottom: 7px;
+            height: 10px;
+            width: 250px;
+            border-radius: 5px;
+
+        }
+
+        .container .predictform form button {
+            color: black;
+            background-color: white;
+            border: 2px solid orange;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: bolder;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <h1>Heart Disease Prediction</h1>
+        <div class="predictform">
+            <form action="{{ url_for('predict1')}}" method="post">
+                <input type="text" name="Age" placeholder="Age" required="required" /> <br>
+                <input type="text" name="Sex" required="required" placeholder="Sex" /> <br>
+                <input type="text" name="ChestPain" required="required" placeholder="ChestPain" /> <br>
+                <input type="text" name="RestingBP" required="required" placeholder="RestingBP" /> <br>
+                <input type="text" name="Cholesterol	" required="required" placeholder="Cholesterol	" /> <br>
+                <input type="text" name="FastingBS" required="required" placeholder="FastingBS" /> <br>
+                <input type="text" name="RestingECG" required="required" placeholder="RestingECG" /> <br>
+                <input type="text" name="MaxHR" required="required" placeholder="MaxHR" /> <br>
+                <input type="text" name="ExerciseAngina" required="required" placeholder="ExerciseAngina" /> <br>
+                <input type="text" name="ST_Slope" required="required" placeholder="ST_Slope" /> <br>
+                <button type="submit">Predict</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
